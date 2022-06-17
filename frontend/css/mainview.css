@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border: 0; */
+    /* font-size: 100%; */
+	/* font: inherit;
+	vertical-align: baseline; */
+}
+
+#mainview {
+    width: 100vw;
+    height: 100vh;
+    /* height: 100vh; */
+    /* margin-top: 10rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#err{
+    display: none;
+}
+
+#errText{
+    font-size: 18pt;
+    color: red;
+}
+
+#container {
+
+    width: 60vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid black;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    padding: 10px;
+}
+
+#title{
+    margin-bottom: 10px;
+}
+
+#titleText{
+    margin-top: 10px;
+    font-size: 20pt;
+}
+
+
+.rowSpace{
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+#loginBox{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#loginText{
+    margin-right: 15px;
+    font-size: 13pt;
+}
+
+#orderNumberBox{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    margin-bottom: 20px;
+}
+
+#titleTextBox{
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-size: 17pt;
+}
+
+#orderNumber{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#labelOrder{
+    margin-right: 10px;
+}
+
+#button{
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+#track{
+    padding: 5px;
+    width: 200px;
+    height: 40px;
+    margin-right: 15px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    font-size: 14pt;
+    font-weight: bold;
+    /* transition: .5s; */
+  
+    border: 1px solid rgb(53, 53, 253);;
+    border-radius: 5px;
+}
+
+@media (max-width: 760px) {
+    #orderNumber{
+        /* margin-top: 15px;
+        margin-bottom: 15px; */
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center;
+        align-items: center; */
+    }
+
+  }
+  

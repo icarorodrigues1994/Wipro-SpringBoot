@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Track Order</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/css/reset.css"> -->
+    <link rel="stylesheet" href="css/mainview.css">
+</head>
+
+<body>
+    <div id="mainview">
+        <div id="err">
+            <span id="errText">Erro tal</span>
+        </div>
+        <div id="container">
+            <h1 id="titleText">ABC Courier Services</h1>
+            <div id="loginBox">
+                <a href="login.html" id="loginText">Login</a>
+            </div>
+            <hr size="2" width="100%" class="rowSpace">
+            <div id="orderNumberBox">
+                <h1 id="titleTextBox">Track Order</h1>
+                <hr size="2" width="99%" class="rowSpace">
+                <div id="orderNumber">
+                    <label id="labelOrder">Enter Order Number</label>
+                    <input placeholder="Order Number" id="orderId" />
+                </div>
+                <div id="button">
+                    <button Id="track" onclick="getOrder()">Track Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/home.js"></script>
+
+</body>
+
+</html>

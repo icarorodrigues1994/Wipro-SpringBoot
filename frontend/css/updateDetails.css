@@ -1,0 +1,80 @@
+
+
+#homeBox{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 25px;
+}
+
+#detailsBox{
+    margin: 15px 50px 10px 50px;
+}
+
+#titleText{
+    font-size: 19pt;
+}
+
+#orderNumber{
+    border: solid 2px black;
+    padding: 7px;
+}
+
+
+.orderDetails{
+    border: solid 2px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 5px;
+    padding: 10px 10px;
+    height: 150px
+}
+
+
+.dataRow{
+    display: flex;
+    flex-direction: row;
+    /* padding: 10px 0 0 20px; */
+    margin: 4px 0 0 20px;
+}
+
+
+.labelText{
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 12pt;
+}
+
+.dropdown{
+    width:30rem;
+    margin-top: 40px;
+    margin-left: 60px;
+}
+
+
+.dropdown-select{
+    height: 0px;
+    width: 191px;
+    padding:3.5rem;
+    border-radius: 4px;
+    border: solid 2px gray;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size:1rem;
+    cursor: pointer;
+
+}
+
+#status{
+    width: 110px;
+}
+
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}

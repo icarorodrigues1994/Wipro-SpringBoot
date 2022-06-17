@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/mainview.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/login.js" defer></script>
+    <title>login</title>
+
+</head>
+
+<body>
+    <div id="mainview">
+        <div id="err">
+            <span id="errText">Erro tal</span>
+        </div>
+        <div id="container">
+            <h1 id="titleText">ABC Courier Services</h1>
+            <hr size="2" width="100%" class="rowSpace">
+            <div id="orderNumberBox" style="height: 220px;">
+                <h1 id="titleTextBox">Login</h1>
+                <hr size="2" width="99%" class="rowSpace">
+                <div id="orderNumber">
+                    <label id="labelOrder">User Name :</label>
+                    <input  type="text" id="userName" SIZE=25 MAXLENGTH=30 />
+                </div>
+                <div id="orderNumber2">
+                    <label id="labelOrder">Password : </label>
+                    <input type="password" id="password" SIZE=25 MAXLENGTH=30/>
+                </div>
+                
+                <div class="button1">
+                    <input type="submit" onclick="getLogin()" value="login" id="login" style="width: 61px; margin-top: 20px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

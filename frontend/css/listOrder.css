@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#listOrderBox{
+    margin: 15px 50px 10px 50px;
+}
+
+#titleText{
+    font-size: 19pt;
+}
+
+#homeBox{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 25px;
+}
+
+#err{
+    display: none;
+}
+
+
+.tableDetails{
+    margin-top: 50px;
+    /*display: none;  usar depois*/   
+}
+
+.tableDetails2{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+

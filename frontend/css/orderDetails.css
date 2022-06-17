@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#detailsBox{
+    margin: 15px 50px 10px 50px;
+}
+
+#titleText{
+    font-size: 19pt;
+}
+
+#homeBox{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 5px;
+}
+
+#home{
+    margin-right: 5px;
+}
+
+#rowSpace{
+    margin-bottom: 10px;
+}
+
+#orderNumber{
+    border: solid 2px black;
+    padding: 7px;
+}
+
+.boxRotulo{
+    font-weight: bold;
+    text-align: center;
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+}
+
+.orderDetails{
+    border: solid 2px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 5px;
+    padding: 10px 10px;
+}
+
+.dataRow{
+    display: flex;
+    flex-direction: row;
+    /* padding: 10px 0 0 20px; */
+    margin: 4px 0 0 20px;
+}
+
+.dataRow2{
+    display: flex;
+    flex-direction: row;
+    /* padding: 10px 0 0 20px; */
+    margin: 4px 0 0 20px;
+}
+
+.rowDetails{
+    display: block;
+    width: 50%;
+}
+
+.labelText{
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 12pt;
+}
