@@ -60,9 +60,9 @@ public class OrderController {
 		return ResponseEntity.ok().body(service.saveOrder(order));
 	}
 	
-	@PutMapping
-	public ResponseEntity<Order> updateOrder(@RequestBody Order order) {
-		return ResponseEntity.ok().body(service.updateOrder(order));
+	@PutMapping("/{orderNumber}")
+	public ResponseEntity<Order> updateOrder(@PathVariable String orderNumber, @RequestBody Order order) {
+		return ResponseEntity.ok().body(service.updateOrder(orderNumber, order));
 	}
 	
 }

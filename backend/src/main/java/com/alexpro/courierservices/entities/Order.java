@@ -2,6 +2,7 @@ package com.alexpro.courierservices.entities;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.Date;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -27,10 +28,12 @@ public class Order implements Serializable {
 	
 	private String orderNumber;
 	private OrderStatus orderStatus;
-	private Instant orderDate;
 	
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy HH:mm:ss", timezone = "GMT-3")
-	private Instant deliveredDate;
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM-dd-yyyy", timezone = "GMT-3")
+	private Date orderDate;
+	
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM-dd-yyyy", timezone = "GMT-3")
+	private Date deliveredDate;
 	private double weight;
 	private double cost;
 	
@@ -68,11 +71,11 @@ public class Order implements Serializable {
 		this.orderStatus = orderStatus;
 	}
 
-	public Instant getOrderDate() {
+	public Date getOrderDate() {
 		return orderDate;
 	}
 
-	public void setOrderDate(Instant orderDate) {
+	public void setOrderDate(Date orderDate) {
 		this.orderDate = orderDate;
 	}
 
@@ -108,11 +111,11 @@ public class Order implements Serializable {
 		this.personReceived = personReceived;
 	}
 
-	public Instant getDeliveredDate() {
+	public Date getDeliveredDate() {
 		return deliveredDate;
 	}
 
-	public void setDeliveredDate(Instant deliveredDate) {
+	public void setDeliveredDate(Date deliveredDate) {
 		this.deliveredDate = deliveredDate;
 	}
 	

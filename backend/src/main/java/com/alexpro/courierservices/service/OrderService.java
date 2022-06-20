@@ -38,8 +38,8 @@ public class OrderService {
 		return orderRepository.save(order);
 	}
 	
-	public Order updateOrder(Order newOrder) {
-		Order order = orderRepository.findByOrderNumber(newOrder.getOrderNumber());
+	public Order updateOrder(String orderNumber, Order newOrder) {
+		Order order = orderRepository.findByOrderNumber(orderNumber);
 		
 		order.setOrderStatus(newOrder.getOrderStatus());
 		order.setDeliveredDate(newOrder.getDeliveredDate());

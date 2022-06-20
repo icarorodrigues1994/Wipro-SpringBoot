@@ -18,12 +18,16 @@ function logout(){
     window.location.assign("login.html");
 }
 
+
+
+
 let text = fazGet("http://localhost:8081/courierServices/allOrders");
 
 if(text.length === 0){
     tableDetails.classList.add("tableDetails2"); 
     container.classList.remove("tableDetails2");
     container.classList.add("tableDetails");
+    
 } else {
 
 let indiceTabela = ["Order ID","Order Date","Sender State","Recipient State","Order Status","Weight","Cost(@ Rs. 10/Kg)","Update Order"];
@@ -43,19 +47,35 @@ thead.appendChild(linhaHead);
 for(let i = 0; i < text.length; i++) {
     let linhabody = ''
     linhabody = document.createElement("tr");
+
     var myArray = new Array(text[i].id, text[i].orderDate,text[i].personSend.address.state,text[i].personReceived.address.state,text[i].orderStatus,text[i].weight, 
         text[i].cost);
     
         for(let j = 0; j < 8; j++){
             if (j===7){
+            let tag0 = document.createElement("td");
+            tag0.style = "height: 35px;"
+
+            if(text[i].orderStatus === "open"){
             let tag = document.createElement("input");
             tag.type = "submit";
+
+            tag.onclick = function(){
+
+                localStorage.setItem('updateOrder',text[i].orderNumber);
+                window.location.assign("updateOrder.html");
+                
+            }
+
             tag.value="Update Order Status";
             tag.id="login" + i.toString();
             console.log(tag.id);
-            tag.style="width: 150px; margin-top: 10px; margin-left: 5px; margin-bottom:9px;";
-            linhabody.appendChild(tag);
+            tag.style="width: 130px; margin-top: 10px; margin-left: 5px; margin-bottom:9px;";
+
+            tag0.appendChild(tag); 
             }
+            linhabody.appendChild(tag0); 
+     } 
 
         let tag = document.createElement("td");
         tag.textContent = myArray[j];
@@ -68,5 +88,4 @@ tabela.appendChild(thead);
 tabela.appendChild(tbody);
 
 }
-
 

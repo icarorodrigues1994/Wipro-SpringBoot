@@ -91,7 +91,7 @@ function moldFeatureOrder(order) {
 
     var divRowTwo = document.createElement("div");
     divRowTwo.className = "dataRow";
-    divRowTwo.appendChild(moldRowDetails("Status", order.status));
+    divRowTwo.appendChild(moldRowDetails("Status", order.orderStatus));
 
     var divRowThree = document.createElement("div");
     divRowThree.className = "dataRow";

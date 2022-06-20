@@ -41,7 +41,7 @@ async function trackOrder(orderNumber) {
             "orderNumber": order.orderNumber,
             "orderStatus": order.orderStatus,
             "orderDate": order.orderDate,
-            "deliveredDate": order.orderDate,
+            "deliveredDate": order.deliveredDate,
             "weight": order.weight,
             "cost": order.cost,
             "personSend": order.personSend,

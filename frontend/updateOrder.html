@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" defer></script>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" defer></script>
     <link rel="stylesheet" href="css/updateDetails.css">
+    <script src="js/updateOrder.js" defer></script>
     <title>Update Order Status</title>
 </head>
 
@@ -17,30 +16,36 @@
         <div id="homeBox">   </div>
         <hr size="2" width="100%" id="rowSpace">
     </div>
-
-    <header id="orderNumber" class="orderDetails">
-            <div class="dataRow">
+    <div id="divMain">
+           <header id="orderNumber" class="orderDetails">
+            <div id="divRefer">
+           <!-- <div class="dataRow" id ="lol">
                 <label for="" class="labelText">Order Number</label>
-                <label for="" class="labelText" style="color:gray">123456789</label>
-            </div>
+                <label id="orderNumberLabel" for="" class="labelText" style="color:gray">123456789</label> 
+            </div> -->
+         </div>
             <div class="dropdown">
             <label for="status">Status</label>
-            <select id="status">
-                <option value="delivered">delivered</option>
-                <option value="delivered">canceled</option>
+            <select id="status" name="status" class="status">
+                <option value="delivered" id="delivered" >delivered</option>
+                <option value="delivered" id="cancelled" >cancelled</option>
 
             </select>
 
             <label for="status" style="margin-left: 85px;">Delivered Date </label>
-            <input type="date">
+            <input type="date" id="date" placeholder="mm/dd/yyyy" name="date" class="date">
 
 
         </div>
      </header>
+    </div>
+
      <div class="footer">
-        <input type="submit" value="Save">
-        <input type="submit" value="Cancel" style="margin-left: 24px;">
+        <input type="submit" value="Save" onclick="save()">
+        <input type="submit" value="Cancel" onclick="cancel()" style="margin-left: 24px;">
      </div>
+
+   
  
 
     <script src="./js/orderDetails.js"></script>
