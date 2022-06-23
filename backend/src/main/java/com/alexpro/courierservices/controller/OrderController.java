@@ -13,14 +13,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.alexpro.courierservices.entities.Order;
 import com.alexpro.courierservices.service.AdminService;
 import com.alexpro.courierservices.service.OrderService;
 
 @RestController
-@RequestMapping(value = "/courierServices")
-@CrossOrigin("*")
+//@RequestMapping(value = "/courierServices")
+//@CrossOrigin("*")
 public class OrderController {
 
 	@Autowired
@@ -42,7 +43,7 @@ public class OrderController {
 		return ResponseEntity.ok().body(obj);
 	}
 	
-	
+		
 	
 	@GetMapping("/{orderNumber}")
 	public ResponseEntity<Order> getOrder(@PathVariable String orderNumber) {
@@ -55,7 +56,7 @@ public class OrderController {
 	}
 	
 	
-	@PostMapping
+	@PostMapping("/saveOrder")
 	public ResponseEntity<Order> saveOrder(@RequestBody Order order) {
 		return ResponseEntity.ok().body(service.saveOrder(order));
 	}
