@@ -78,7 +78,8 @@ function moldPersonDetails(personDetailsTitle, person) {
 
 function moldFeatureOrder(order) {
 
-    var statusDelivered = order.status === true ? "Delivered" : "Not delivered";
+
+    var statusDelivered = order.orderStatus === "delivered" ? order.deliveredDate : "";
 
     var header = document.createElement("header");
     header.className = "orderDetails";

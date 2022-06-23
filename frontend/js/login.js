@@ -1,7 +1,7 @@
 const Ilogin = document.querySelector('#userName')
 const Ipassword = document.querySelector('#password')
-var divErr = document.getElementById('err');
-var errText = document.getElementById('errText');
+var divErr = document.getElementById('error');
+var errText = document.getElementById('errorText');
 let errorMessage = document.createElement("span");
 
 function fazGet(url){
@@ -53,7 +53,7 @@ function getLogin(){
     }
 
     
-    let text = fazGet("http://localhost:8081/courierServices/validationPassword/" +Ilogin.value+ "/" +Ipassword.value)
+    let text = fazGet("http://localhost:8080/courierServices/validationPassword/" +Ilogin.value+ "/" +Ipassword.value)
     if(text === "false"){
         errorMessage = "Invalid Login credentials";
         showErr(errorMessage);

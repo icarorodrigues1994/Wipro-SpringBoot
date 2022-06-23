@@ -5,7 +5,7 @@
 
 #homeBox{
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row-reverse;    
     margin-bottom: 25px;
 }
 
@@ -70,7 +70,7 @@
 
 }
 
-#status{
+#statusSelect{
     width: 110px;
 }
 

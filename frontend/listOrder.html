@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/listOrder.css">
-    <title>List Order</title>
+    <title>Orders</title>
 </head>
 
 <body>
@@ -16,8 +16,8 @@
         </div>
         <hr size="2" width="100%" id="rowSpace">
         <div class="divButtons">
-            <input type="submit" value="Add Order" id="login" style="width: 90px; margin-top: 10px;">
-            <input type="submit" value="Logout" id="login1" onclick="logout()" style="width: 67px; margin-top: 10px; margin-left: 5px;">
+            <input type="submit" value="Add Order" id="addOrder" onclick="addOrder()" style="width: 90px; margin-top: 10px;">
+            <input type="submit" value="Logout" id="logout" onclick="logout()" style="width: 67px; margin-top: 10px; margin-left: 5px;">    
         </div>
 
         <div id= "divmMain" class="tableDetails">
@@ -50,7 +50,7 @@
             </div> -->
         
     </div>
-    <div id="container" class="tableDetails2">
+    <div id="noorders" class="tableDetails2">
         <h1 id="titleText" style="text-align: center;">No orders found Click </h1>
         <h1 id="titleText" style="text-align: center;">Add Order button to add an order</h1>
     </div>  

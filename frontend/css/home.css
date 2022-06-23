@@ -19,11 +19,11 @@
     align-items: center;
 }
 
-#err{
+#error{
     display: none;
 }
 
-#errText{
+#errorText{
     font-size: 18pt;
     color: red;
 }

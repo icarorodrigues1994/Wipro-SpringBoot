@@ -8,6 +8,9 @@ import org.springframework.stereotype.Service;
 import com.alexpro.courierservices.entities.Order;
 import com.alexpro.courierservices.repository.OrderRepository;
 
+import java.io.*;
+import java.util.*;
+
 @Service
 public class OrderService {
 
@@ -26,7 +29,8 @@ public class OrderService {
 
 	public List<Order> getAllOrders() {
 		List<Order> orders = orderRepository.findAll();
-
+		Collections.reverse(orders);
+		
 		if (orders != null) {
 			return orders;
 		} else {

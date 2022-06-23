@@ -1,7 +1,7 @@
 
 var inputOrderId = document.getElementById('orderId');
-var divErr = document.getElementById('err');
-var errText = document.getElementById('errText');
+var divErr = document.getElementById('error');
+var errText = document.getElementById('errorText');
 
 function getOrder() {
     var input = inputOrderId.value.trim();
@@ -10,14 +10,14 @@ function getOrder() {
         divErr.style.display = 'none';
 
         if(isNaN(input)){
-            showErr("O número do pedido deve ser numérico");
+            showErr("Order Number should be numeric");
         }else{
             trackOrder(input);
         }
 
     } else  {
-        console.log("Entrou aqui")
-        showErr("O número do pedido deve ser obrigatório");
+
+       showErr("Order Number should be Mandatory");
     }
 }
 
@@ -27,9 +27,10 @@ function showErr(text){
 }
 
 async function fecthOrderService(orderNumber) {
-    const url_api = `http://localhost:8081/courierServices/${orderNumber}`;
+    const url_api = `http://localhost:8080/courierServices/${orderNumber}`;
+    
     return await fetch(url_api).then(async (r) => r.json()).catch(
-       () => showErr("Número de pedido inválido") // tenho que melhorar isso aqui
+       () => showErr("Invalid Order Number") 
     )
 }
 
@@ -47,7 +48,7 @@ async function trackOrder(orderNumber) {
             "personSend": order.personSend,
             "personReceived": order.personReceived
         }
-        console.log(orderDetails)
+        
         localStorage.setItem('orderDetails', JSON.stringify(orderDetails));
         
         inputOrderId.value = "";

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./css/orderDetails.css"> -->
+    <link rel="stylesheet" href="css/addOrder.css">
+    <script src="js/addOrder.js" defer></script>
+
+    <title>Add Order</title>
+</head>
+
+<body>
+    <div id="addBox">
+        <h1 id="titleText">Add an Order</h1>
+        <hr size="2" width="100%" class="rowSpace">
+        <div id="error">
+            <label id="errorLabel" for="" class="ErrorText"></label>
+        </div>
+        <!-- Person Send -->
+        <header class="orderDetails">
+            <span class="boxRotulo">Sender Details</span>
+             <!-- Linha 1 -->
+            <div class="dataRow">
+                <div class="rowDetails">
+                    <label for="" class="labelText">First Name</label>
+                    <input type="text" placeholder="First Name" id="senderFirstName" class="inputData"  >
+                </div>
+                <div class="rowDetails">
+                    <label for="" class="labelText">City</label>
+                    <input type="text" placeholder="City" id="senderCity" class="inputData">
+                </div>
+            </div>
+             <!-- Linha 2 -->
+            <div class="dataRow">
+                <div class="rowDetails">
+                    <label for="" class="labelText">Last Name</label>
+                    <input type="text" placeholder="Last Name" id="senderLastName" class="inputData">
+                </div>
+                <div class="rowDetails">
+                    <label for="" class="labelText">State</label>
+                    <select id="senderState" class="inputData"> 
+                        <option  >Andhra Pradesh</option>
+                        <option  >Arunachal Pradesh</option>
+                        <option  >Assam</option>
+                        <option  >Bihar</option>
+                        <option  >Chhattisgarh</option>
+                        <option  >Goa</option>
+                        <option  >Gujarat</option>
+                        <option  >Haryana</option>
+                        <option  >Himachal Pradesh</option>
+                        <option  >Jammu & Kashmir</option>
+                        <option  >Jharkhand</option>
+                        <option  >Karnataka</option>
+                        <option  >Kerala</option>
+                        <option  >Madhya Pradesh</option>
+                        <option  >Manipur</option>
+                        <option  >Meghalaya</option>
+                        <option  >Mizoram</option>
+                        <option  >Nagaland</option>
+                        <option  >Odisha</option>
+                        <option  >Punjab</option>
+                        <option  >Rajasthan</option>
+                        <option  >Sikkim</option>
+                        <option  >Tamil Nadu</option>
+                        <option  >Telangana</option>
+                        <option  >Tripura</option>
+                        <option  >Uttarakhand</option>
+                        <option  >Uttar Pradesh</option>
+                        <option  >West Bengal</option>
+                    </select>
+
+                </div>
+            </div>
+       
+            <!-- Linha 3 -->
+            <div class="dataRow">
+                <div class="rowDetails">
+                    <label for="" class="labelText">Age</label>
+                    <input type="text" placeholder="Age" id="senderAge" class="inputData">
+                </div>
+                <div class="rowDetails">
+                    <label for="" class="labelText">Mobile</label>
+                    <input type="text" placeholder="Mobile no" id="senderContact" class="inputData">
+                </div>
+            </div>
+            <!-- Linha 4 -->
+            <div class="dataRow">
+                <div class="rowDetails">
+                    <label for="" class="labelText">Address</label>
+                    <input type="text" placeholder="Address" id="senderAddress" class="inputData">
+                </div>
+                <div class="rowDetails">
+                    <label for="" class="labelText">ZIP Code</label>
+                    <input type="text" placeholder="Zip Code" id="senderZipCode" class="inputData">
+                </div>
+            </div>
+        </header>
+        
+
+        <!-- Person Received -->
+        <header class="orderDetails">
+            <span class="boxRotulo">Received Details</span>
+             <!-- Linha 1 -->
+            <div class="dataRow">
+                <div class="rowDetails">
+                    <label for="" class="labelText">First Name</label>
+                    <input type="text" placeholder="First Name" id="recipientFirstName" class="inputData">
+                </div>
+                <div class="rowDetails">
+                    <label for="" class="labelText">City</label>
+                    <input type="text" placeholder="City" id="recipientCity" class="inputData">
+                </div>
+            </div>
+             <!-- Linha 2 -->
+            <div class="dataRow">
+                <div class="rowDetails">
+                    <label for="" class="labelText">Last Name</label>
+                    <input type="text" placeholder="Last Name" id="recipientLastName" class="inputData">
+                </div>
+                <div class="rowDetails">
+                    <label for="" class="labelText">State</label>
+                    <select id="recipientState" class="inputData"> 
+                        <option  >Andhra Pradesh</option>
+                        <option  >Arunachal Pradesh</option>
+                        <option  >Assam</option>
+                        <option  >Bihar</option>
+                        <option  >Chhattisgarh</option>
+                        <option  >Goa</option>
+                        <option  >Gujarat</option>
+                        <option  >Haryana</option>
+                        <option  >Himachal Pradesh</option>
+                        <option  >Jammu & Kashmir</option>
+                        <option  >Jharkhand</option>
+                        <option  >Karnataka</option>
+                        <option  >Kerala</option>
+                        <option  >Madhya Pradesh</option>
+                        <option  >Manipur</option>
+                        <option  >Meghalaya</option>
+                        <option  >Mizoram</option>
+                        <option  >Nagaland</option>
+                        <option  >Odisha</option>
+                        <option  >Punjab</option>
+                        <option  >Rajasthan</option>
+                        <option  >Sikkim</option>
+                        <option  >Tamil Nadu</option>
+                        <option  >Telangana</option>
+                        <option  >Tripura</option>
+                        <option  >Uttarakhand</option>
+                        <option  >Uttar Pradesh</option>
+                        <option  >West Bengal</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Linha 3 -->
+            <div class="dataRow">
+                <div class="rowDetails">
+                    <label for="" class="labelText">Age</label>
+                    <input type="text" placeholder="Age" id="recipientAge" class="inputData">
+                </div>
+                <div class="rowDetails">
+                    <label for="" class="labelText">Mobile</label>
+                    <input type="text" placeholder="Mobile no" id="recipientContact" class="inputData">
+                </div>
+            </div>
+            <!-- Linha 4 -->
+            <div class="dataRow">
+                <div class="rowDetails">
+                    <label for="" class="labelText">Address</label>
+                    <input type="text" placeholder="Address" id="recipientAddress" class="inputData">
+                </div>
+                <div class="rowDetails">
+                    <label for="" class="labelText">ZIP Code</label>
+                    <input type="text" placeholder="Zip Code" id="recipientZipCode" class="inputData">
+                </div>
+            </div>
+        </header>
+
+        <!-- Details Order -->
+        <header class="orderDetails">
+             <!-- Linha 1 -->
+            <div class="dataRow">
+                <div class="rowDetails">
+                    <label for="" class="labelText">Order Date:</label>
+                    <input type="date"  id="orderDate" class="inputData">
+                </div>
+            </div>
+             <!-- Linha 2 -->
+            <div class="dataRow">
+                <div class="rowDetails">
+                    <label for="" class="labelText">Weight:</label>
+                    <input type="text" placeholder="Weight in Kg" id="weight" class="inputData">
+                </div>
+            </div>
+            <!-- Linha 3 -->
+            <div class="dataRow">
+                <div>
+                    <label for="" class="labelText">Cost:</label>
+                    <label for="" class="labelText" id="cost">0.00</label>
+                </div>
+            </div>
+            <!-- Linha 4 -->
+            <div class="dataRow">
+                <div class="rowButton">
+                    <button class="button" id="placeOrder" onclick="placeOrder()">Place Order</button>
+                    <button class="button" id="cancel" onclick="cancel()">Cancel</button>
+               </div>      
+            </div>
+        </header>
+    </div>
+
+    
+</body>
+
+</html>

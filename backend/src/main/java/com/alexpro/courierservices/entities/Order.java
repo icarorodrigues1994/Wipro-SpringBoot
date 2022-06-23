@@ -3,6 +3,7 @@ package com.alexpro.courierservices.entities;
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.Date;
+import java.util.Random;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -44,7 +45,7 @@ public class Order implements Serializable {
 	private PersonReceived personReceived;
 
 	public Order() {
-		// TODO Auto-generated constructor stub
+		orderNumber = randomNumberAccount();
 	}
 
 	public Long getId() {
@@ -117,6 +118,15 @@ public class Order implements Serializable {
 
 	public void setDeliveredDate(Date deliveredDate) {
 		this.deliveredDate = deliveredDate;
+	}
+	
+	public String randomNumberAccount() {
+		String numberAccount = "";
+		Random random = new Random();
+		for (int j = 0; j < 6; j++) {
+			numberAccount += Integer.toString(random.nextInt(10));
+		}
+		return numberAccount;
 	}
 	
 

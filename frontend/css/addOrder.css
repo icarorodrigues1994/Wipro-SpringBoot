@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#addBox{
+    margin: 15px 10% 10px 10%;
+}
+
+#titleText{
+    margin-top: 20px;
+    font-size: 20pt;
+    text-align: center;
+}
+
+#error{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: none;
+}
+
+
+.boxRotulo{
+    font-weight: bold;
+    text-align: center;
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+}
+
+.orderDetails{
+    border: solid 2px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 5px;
+    padding: 10px 10px;
+}
+
+
+.dataRow{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0 0 20px;
+    justify-content: space-around;
+}
+
+.rowDetails{
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    /* padding: 10px 0 0 20px; */
+    margin: 4px 0 0 20px;
+    justify-content: space-between;
+}
+
+.labelText{
+    width: 30%;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 12pt;
+    /* margin-right: 20px; */
+}
+.inputData{
+    width: 70%;
+    /* height: 1.2rem; */
+}
+
+.button{
+    padding: 5px;
+    width: 100px;
+    height: 30px;
+    margin-right: 15px;
+}
+.rowButton{
+    display: block;
+}
+
+@media (max-width: 760px) {
+   .labelText{
+        width: 40%;
+   }
+   .inputData{
+     width: 50%;
+   }
+}
+
+.rowSpace{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.ErrorText{
+    color:red;
+}
+
+.ErrorBorder{
+    border: solid 2px red;
+}

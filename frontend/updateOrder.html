@@ -26,14 +26,14 @@
          </div>
             <div class="dropdown">
             <label for="status">Status</label>
-            <select id="status" name="status" class="status">
+            <select id="statusSelect" name="status" class="status">
                 <option value="delivered" id="delivered" >delivered</option>
                 <option value="delivered" id="cancelled" >cancelled</option>
 
             </select>
 
             <label for="status" style="margin-left: 85px;">Delivered Date </label>
-            <input type="date" id="date" placeholder="mm/dd/yyyy" name="date" class="date">
+            <input type="date" id="deliveryDate" placeholder="mm/dd/yyyy" name="date" class="date">
 
 
         </div>
@@ -41,14 +41,12 @@
     </div>
 
      <div class="footer">
-        <input type="submit" value="Save" onclick="save()">
+        <input type="submit" id="savechange" value="Save" onclick="save()">
         <input type="submit" value="Cancel" onclick="cancel()" style="margin-left: 24px;">
      </div>
 
    
- 
 
-    <script src="./js/orderDetails.js"></script>
 </body>
 
 </html>
