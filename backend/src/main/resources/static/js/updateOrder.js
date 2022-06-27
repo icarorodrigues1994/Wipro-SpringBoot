@@ -9,17 +9,9 @@ let cancelled = document.getElementById("#cancelled");
 let istatus = document.querySelector(".status")
 let idateDelivered = document.querySelector(".date")
 
-let order = fazGet("http://localhost:8080/courierServices/" + updateOrder);
+
 
 updateOrder = updateOrder.toString();
-
-
-function fazGet(url){
-    let request = new XMLHttpRequest()
-    request.open("GET",url,false)
-    request.send()
-    return request.responseText
-}
 
 
 function cancel(){
@@ -37,43 +29,33 @@ function cancel(){
 
     let date = month +"-"+ day +"-"+ year
     
-    saveOrderAndRedirectPage(opcaoTexto,date);
+    saveAndupdateOrder(opcaoTexto,date);
        
 
 }
 
+function saveAndupdateOrder(opcaoTexto,date){
 
-
-async function fazPut(orderStatus, orderDate){
-    return await fetch("http://localhost:8080/courierServices/" + updateOrder,{
-
-        headers:{
-            "Content-Type":"application/json"
-        },
-        method:"PUT",
-        body: JSON.stringify({
-            orderStatus: orderStatus,
-            deliveredDate: orderDate
+    var opcaoTextoOrder = opcaoTexto.toString();
+    var deliveredDateOrder = date.toString();
+    
+    $.ajax({
+        url: 'http://localhost:8080/courierServices/updateOrder/' + updateOrder,
+        method:'put',
+        processData:false,
+        contentType:'application/json',
+        data:JSON.stringify({
+            "orderStatus": opcaoTextoOrder,
+            "deliveredDate": deliveredDateOrder
         })
-
+        
+    }).done(function(respost){
+        window.location.assign("listOrder.html");
     })
-    .then(function (res){console.log(res)} )
-    .catch(function (res){console.log(res)})
- 
-    }
-
-    async function saveOrderAndRedirectPage(opcaoTexto,date){
-        var order = await fazPut(opcaoTexto,date);
-        window.location.assign("listOrder.html"); 
-    }
-
-
+}
 
 
     function main(){
-        order = JSON.parse(order);
-        idateDelivered.value = order.deliveredDate;
-    
         divRefer.appendChild(div);
         div.className = "dataRow";
         div.innerHTML = `

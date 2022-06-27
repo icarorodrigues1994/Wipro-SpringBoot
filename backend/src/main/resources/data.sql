@@ -1,0 +1,1 @@
+INSERT INTO ADMIN VALUES (1,'admin01','AdminPass01')

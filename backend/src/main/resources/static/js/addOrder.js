@@ -276,37 +276,27 @@ function cancel(){
 
 
       
-    async function fazPost(order){
-        return await fetch("http://localhost:8080/courierServices",{
-
-        headers:{
-            "Accept":"application/json",
-            "Content-Type":"application/json"
-        },
-        method:"POST",
-        body: JSON.stringify({
-            "orderStatus":"open",
-            "orderDate": order.orderDate,
-            "weight": order.weight,
-            "cost": order.cost,
-            "personReceived": order.personReceived,
-            "personSend": order.personSend
+    function saveOrderAndRedirectPage(order){
+        
+        
+        $.ajax({
+            url: 'http://localhost:8080/courierServices/saveOrder',
+            method:'post',
+            processData:false,
+            contentType:'application/json',
+            data:JSON.stringify({
+                "orderStatus":"open",
+                "orderDate": order.orderDate,
+                "weight": order.weight,
+                "cost": order.cost,
+                "personReceived": order.personReceived,
+                "personSend": order.personSend
+            })
+            
+        }).done(function(respost){
+            window.location.assign("listOrder.html");
         })
-
-    })
-    .then(function (res){
-      return res.ok
-     })
-    .catch(function (res){res})  
-       
-    }
-
-    
-    async function saveOrderAndRedirectPage(order){
-        var saveOrder = await fazPost(order);
-        window.location.assign("listOrder.html");
     }
 
 
-
-   
+        

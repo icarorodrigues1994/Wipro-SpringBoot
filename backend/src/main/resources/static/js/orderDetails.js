@@ -1,8 +1,3 @@
-// const url_api = "http://localhost:8081/courierServices/5";
-
-// async function fecthOrderService() {
-//     return await fetch(url_api).then(async (r) => r.json());
-// }
 
 
 function moldAllBoxDetails(order) {
@@ -24,7 +19,7 @@ function moldAllBoxDetails(order) {
 }
 
 function home(){
-    window.location.assign("home.html");
+    window.location.assign("index.html");
 }
 
 function moldOrderNumber(orderNumber) {
@@ -120,23 +115,15 @@ function moldRowDetails(labelTitle, labelDetail) {
 
 
 function main() {
-    // const order = await fecthOrderService();
+   
 
     let orderDetails = localStorage.getItem('orderDetails');
     if (orderDetails != null) {
         orderDetails = JSON.parse(orderDetails);
-        console.log(orderDetails)
         moldAllBoxDetails(orderDetails);
-        localStorage.clear(); // limpar storage
-    } else {
-        // tratar isso
-    }
-
-    // if (order != null) {
-    //     console.log(order)
-    //     moldAllBoxDetails(order);
-    // }
-
+        localStorage.clear(); 
+   
+}
 }
 
 main();

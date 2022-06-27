@@ -30,12 +30,6 @@ public class OrderController {
 	@Autowired
 	private AdminService adminService;
 	
-//	@GetMapping(value = "/validationPassword", params = {"login", "password"})
-//	public ResponseEntity<Boolean> login(@RequestParam String login, @RequestParam String password ){
-//		Boolean obj = adminService.login(login,password);
-//		System.out.println("Tipo do retorno: "+obj);
-//		return ResponseEntity.ok().body(obj);
-//	}
 	
 	@GetMapping(value = "/validationPassword/{login}/{password}")
 	public ResponseEntity<Boolean> login(@PathVariable String login, @PathVariable String password ){
@@ -45,7 +39,7 @@ public class OrderController {
 	
 		
 	
-	@GetMapping("/{orderNumber}")
+	@GetMapping("/getOrder/{orderNumber}")
 	public ResponseEntity<Order> getOrder(@PathVariable String orderNumber) {
 		return ResponseEntity.ok().body(service.getOrder(orderNumber));
 	}
@@ -61,7 +55,7 @@ public class OrderController {
 		return ResponseEntity.ok().body(service.saveOrder(order));
 	}
 	
-	@PutMapping("/{orderNumber}")
+	@PutMapping("/updateOrder/{orderNumber}")
 	public ResponseEntity<Order> updateOrder(@PathVariable String orderNumber, @RequestBody Order order) {
 		return ResponseEntity.ok().body(service.updateOrder(orderNumber, order));
 	}

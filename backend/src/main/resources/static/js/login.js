@@ -1,15 +1,15 @@
-const Ilogin = document.querySelector('#userName')
-const Ipassword = document.querySelector('#password')
+var  logar = document.querySelector('#userName')
+var senha = document.querySelector('#password')
 var divErr = document.getElementById('error');
 var errText = document.getElementById('errorText');
-let errorMessage = document.createElement("span");
+var errorMessage = document.createElement("span");
 
-function fazGet(url){
+/*function fazGet(url){
     let request = new XMLHttpRequest()
     request.open("GET",url,false)
     request.send()
     return request.responseText
-}
+}*/
 
 function showErr(text){
     divErr.style.display = 'block'
@@ -19,46 +19,63 @@ function showErr(text){
 
 
 function getLogin(){
-   
-    if (Ilogin.value === "" && Ipassword.value === ""){
+
+    let login = logar.value;
+    let password = senha.value;
+
+    if (login === "" && password === ""){
         errorMessage= "User Name is mandatory / Password is mandatory"
         showErr(errorMessage);
         return;
      } 
      
 
-    if (Ilogin.value === ""){
+    if (login === ""){
         errorMessage = "User Name is mandatory ";
         showErr(errorMessage);
        return;
-    } 
+    }   
 
     const regex = /[0-9]/;
-    if (regex.test(Ilogin.value) === false && password.value === ""){
+    if (regex.test(login) === false && password === ""){
         errorMessage =  "User Name must be alphanumeric / Password is mandatory";
         showErr(errorMessage);
         return;
     }
 
-    if(Ipassword.value === ""){
+    if(password === ""){
        errorMessage = "Password is mandatory";
        showErr(errorMessage);
        return;
     }
 
-    if (regex.test(Ilogin.value) === false){
+    if (regex.test(login) === false){
         errorMessage = "User Name must be alphanumeric";
         showErr(errorMessage); 
         return;
     }
 
-    
-    let text = fazGet("http://localhost:8080/courierServices/validationPassword/" +Ilogin.value+ "/" +Ipassword.value)
-    if(text === "false"){
-        errorMessage = "Invalid Login credentials";
-        showErr(errorMessage);
-        return;
-    }
-
-     window.location.assign("listOrder.html");
+    loginAdmin(login,password);
+   
 };
+
+
+
+function loginAdmin(login, password){
+    $.ajax({
+        url: "http://localhost:8080/courierServices/validationPassword/" +login+ "/" + password,
+        method:'GET',
+
+    }).done(function(respost){
+        if(respost === false){
+            errorMessage = "Invalid Login credentials";
+            showErr(errorMessage);
+            return;
+        }else{
+            window.location.assign("listOrder.html");
+        }
+    
+        
+})
+
+}
